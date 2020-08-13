@@ -1,35 +1,12 @@
-body {
-  background-color: white;
-}
-#fishTank {
-    display: flex;
-    flexwrap: nowrap;
-    margin: 1em;
-    border: 5px dashed red;
-
+h5 {
+  font-weight: bold;
 }
 
-.fishList {
-    flex: 3;
-    display: flex;
-    flex-wrap: wrap;
+.card-deck {
+  width: 20%;
    
 }
 
-.fishList-card {
-  margin: 1em;
 
-}
 
-.card-image {
-
-}
-
-.fish-image {
-
-}
-
-aside {
-  flex: 1
-  background-color: red;
-}
+  
