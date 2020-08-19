@@ -1,35 +1,38 @@
+@import "header.css";
+@import "tips.css";
+
 body {
-  background-color: white;
+	background-color: royalblue;
+	font-family: 'Poppins', sans-serif;
 }
+
 #fishTank {
-    display: flex;
-    flexwrap: nowrap;
-    margin: 1em;
-    border: 5px dashed red;
-
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 1em;
+	/* border: 3px dashed burlywood; */
 }
 
-.fishList {
-    flex: 3;
-    display: flex;
-    flex-wrap: wrap;
-   
+.fishList{
+	flex: 3;
+	display: flex;
+	flex-wrap: wrap;
+	
 }
-
 .fishList-card {
-  margin: 1em;
-
+	background-color: lightcyan;
+	margin: 1em;
+	flex-basis: 25%;
+	padding: 0 1em;
 }
 
-.card-image {
-
-}
+/* .card-image {
+	
+} */
 
 .fish-image {
+	width: 100%;
+	height: auto;
+} 
 
-}
 
-aside {
-  flex: 1
-  background-color: red;
-}
