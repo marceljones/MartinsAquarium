@@ -15,7 +15,7 @@ export const FishList = () => {
 
     let fishHTMLRepresentations = ""
     for (const oneThingFromTheSea of allTheBigAndSmallFish) {
-        fishHTMLRepresentations += Fish(oneThingFromTheSea);   
+        // fishHTMLRepresentations += Fish(oneThingFromTheSea);   
     
     // Add to the existing HTML in the content element
     }
