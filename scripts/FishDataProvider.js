@@ -1,7 +1,7 @@
     const fishCollection = [
         {
             givenName: "Bart",
-            size: "5 inches",
+            size: 10,
             diet: "crustaceans",
             species: "Clownfish",
             harvestLocation: "Petco",
@@ -11,7 +11,7 @@
 
         {
             givenName: "Big Mac",
-            size: "6 feet",
+            size: 12,
             diet: "jellyfish",
             species: "Giant sunfish",
             harvestLocation: "Sam's Club Reef",
@@ -20,7 +20,7 @@
         },
         {
             givenName: "Squigle",
-            size: "2 feet",
+            size: 10,
             diet: "smaller fish",
             species: "Moray Eel",
             harvestLocation: "Ole Dan's boat wreck",
@@ -28,7 +28,7 @@
         },
         {
             givenName: "Hammy",
-            size: "4 feet",
+            size: 15,
             diet: "just about everything",
             species: "Groupers",
             harvestLocation: "Jimmy's big boi fishin' spot",
@@ -36,7 +36,7 @@
         },
         {
             givenName: "Tiny",
-            size: "1 inch",
+            size: 5,
             diet: "plankton",
             species: "Blue Chromis",
             harvestLocation: "Young Dan's boat wreck",
@@ -44,7 +44,7 @@
         },
         {
             givenName: "Bart",
-            size: "5 inches",
+            size: 3,
             diet: "crustaceans",
             species: "Clownfish",
             harvestLocation: "Petco",
@@ -52,7 +52,7 @@
         },
         {
             givenName: "Big Mac",
-            size: "6 feet",
+            size: 9,
             diet: "jellyfish",
             species: "Giant sunfish",
             harvestLocation: "Sam's Club Reef",
@@ -60,7 +60,7 @@
         },
         {
             givenName: "Squigle",
-            size: "2 feet",
+            size: 8,
             diet: "smaller fish",
             species: "Moray Eel",
             harvestLocation: "Ole Dan's boat wreck",
@@ -68,7 +68,7 @@
         },
         {
             givenName: "Hammy",
-            size: "4 feet",
+            size: 4,
             diet: "just about everything",
             species: "Groupers",
             harvestLocation: "Jimmy's big boi fishin' spot",
@@ -76,7 +76,7 @@
         },
         {
             givenName: "Tiny",
-            size: "1 inch",
+            size: 1,
             diet: "plankton",
             species: "Blue Chromis",
             harvestLocation: "Young Dan's boat wreck",
@@ -84,7 +84,7 @@
         },
         {
             givenName: "Bart",
-            size: "5 inches",
+            size: 5,
             diet: "crustaceans",
             species: "Clownfish",
             harvestLocation: "Petco",
@@ -92,7 +92,7 @@
         },
         {
             givenName: "Big Mac",
-            size: "6 feet",
+            size: 6,
             diet: "jellyfish",
             species: "Giant sunfish",
             harvestLocation: "Sam's Club Reef",
@@ -100,7 +100,7 @@
         },
         {
             givenName: "Squigle",
-            size: "2 feet",
+            size: 2,
             diet: "smaller fish",
             species: "Moray Eel",
             harvestLocation: "Ole Dan's boat wreck",
@@ -108,7 +108,7 @@
         },
         {
             givenName: "Hammy",
-            size: "4 feet",
+            size: 4,
             diet: "just about everything",
             species: "Groupers",
             harvestLocation: "Jimmy's big boi fishin' spot",
@@ -116,7 +116,7 @@
         },
         {
             givenName: "Tiny",
-            size: "1 inch",
+            size: 1,
             diet: "plankton",
             species: "Blue Chromis",
             harvestLocation: "Young Dan's boat wreck",
@@ -127,3 +127,36 @@
     export const useFish = () => {
         return fishCollection.slice()
     }
+
+    export const makeHolyFish = () => {
+        const holyArray = [];
+        for (const fishObj of fishCollection)
+        if (fishObj.size % 3 === 0){
+            holyArray.push(fishObj);
+
+            return holyArray;
+        }
+    }
+        // return holyArray;
+   
+    export const makeSoldierFish = () => {
+        const soldierArray = [];
+        for (const fishObj of fishCollection)
+        if (fishObj.size % 5 === 0 && fishObj.size % 3 !== 0){
+        soldierArray.push(fishObj);
+        return soldierArray;
+        }
+    }
+
+        
+
+    export const makeUnHolyFish = () => {
+        const unHolyArray = [];
+        for (fishObj of fishCollection)
+        if (fishObj.size % 5 !== 0 && fishObj.size % 3 !==0){
+            unHolyArray.push(fishObj);
+            return unHolyArray;
+        }
+    }
+        
+    

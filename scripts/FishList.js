@@ -4,26 +4,21 @@
 
 // TODO: Import `useFish` from the data provider module
 
-import { useFish } from './FishDataProvider.js';
-import { Fish } from './Fish.js';
+import { useFish } from "./FishDataProvider.js";
+import { Fish } from "./Fish.js";
+
 export const FishList = () => {
 
     // Get a reference to the `<article class="content">` element
     // Reference to the DOm, reference to the array
     const contentElement = document.querySelector(".fishList");
-    const allTheBigAndSmallFish = useFish()
+    const allTheBigAndSmallFish = useFish();
 
-    let fishHTMLRepresentations = ""
+    let fishHTMLRepresentations = "";
     for (const oneThingFromTheSea of allTheBigAndSmallFish) {
-        // fishHTMLRepresentations += Fish(oneThingFromTheSea);   
+        fishHTMLRepresentations += Fish(oneThingFromTheSea);   
     
     // Add to the existing HTML in the content element
     }
-    contentElement.innerHTML += `
-        <article class="fishList">
-        All the fish go here!
-        </article>
-            ${fishHTMLRepresentations}
-       
-    `
-}
+    contentElement.innerHTML += `${fishHTMLRepresentations}`;
+};
