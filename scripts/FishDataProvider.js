@@ -133,7 +133,7 @@
         for (const fishObj of fishCollection)
         if (fishObj.size % 3 === 0){
             holyArray.push(fishObj);
-
+            console.log("holyArray", holyArray);
             return holyArray;
         }
     }
@@ -144,6 +144,8 @@
         for (const fishObj of fishCollection)
         if (fishObj.size % 5 === 0 && fishObj.size % 3 !== 0){
         soldierArray.push(fishObj);
+        console.log("soldierArray", soldierArray);
+
         return soldierArray;
         }
     }
@@ -152,11 +154,17 @@
 
     export const makeUnHolyFish = () => {
         const unHolyArray = [];
-        for (fishObj of fishCollection)
-        if (fishObj.size % 5 !== 0 && fishObj.size % 3 !==0){
+        for (const fishObj of fishCollection)
+        if (fishObj.size % 5 !== 0 && fishObj.size % 3 !== 0){
             unHolyArray.push(fishObj);
+            console.log("unHolyArray", unHolyArray);
             return unHolyArray;
         }
     }
+    // console.log("unHolyArray", unHolyArray);
+    // console.log("soldierArray", soldierArray);
+    // console.log("holyArray", holyArray);
+
+    
         
     
